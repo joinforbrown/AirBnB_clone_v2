@@ -15,7 +15,6 @@ from models.review import Review
 
 class HBNBCommand(cmd.Cmd):
     """Defines the HolbertonBnB command interpreter."""
-
     prompt = "(hbnb) "
     __classes = {
         "BaseModel",
@@ -68,7 +67,7 @@ class HBNBCommand(cmd.Cmd):
                 storage.new(obj)
             print(obj.id)
             obj.save()
-       except SyntaxError:
+      except SyntaxError:
             print("** class name missing **")
         except NameError:
             print("** class doesn't exist **")
